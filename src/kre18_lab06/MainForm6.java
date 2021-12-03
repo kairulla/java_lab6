@@ -1,5 +1,7 @@
 package kre18_lab06;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author fedora
@@ -31,6 +33,8 @@ public class MainForm6 extends javax.swing.JFrame {
         jComboBox2 = new javax.swing.JComboBox<>();
         jButton_back2 = new javax.swing.JButton();
         jButton_next2 = new javax.swing.JButton();
+        jLabel_picture2 = new javax.swing.JLabel();
+        jLabel_choice2 = new javax.swing.JLabel();
         jFrame3 = new javax.swing.JFrame();
         jCheckBox3 = new javax.swing.JCheckBox();
         jButton_back3 = new javax.swing.JButton();
@@ -61,9 +65,14 @@ public class MainForm6 extends javax.swing.JFrame {
         });
         jFrame2.getContentPane().setLayout(null);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "вода", "чай", "кофе", "молоко", "пиво", "вино" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
         jFrame2.getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(80, 80, 71, 24);
+        jComboBox2.setBounds(50, 60, 82, 24);
 
         jButton_back2.setText("НАЗАД");
         jButton_back2.setMaximumSize(new java.awt.Dimension(0, 0));
@@ -87,14 +96,16 @@ public class MainForm6 extends javax.swing.JFrame {
         });
         jFrame2.getContentPane().add(jButton_next2);
         jButton_next2.setBounds(330, 300, 120, 40);
+        jFrame2.getContentPane().add(jLabel_picture2);
+        jLabel_picture2.setBounds(270, 30, 180, 227);
+        jFrame2.getContentPane().add(jLabel_choice2);
+        jLabel_choice2.setBounds(60, 240, 240, 20);
 
         jFrame2.setLocationRelativeTo(null);
 
         jFrame3.setTitle("окно 3, лаба 6");
         jFrame3.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("icon.jpg")));
-        jFrame3.setMaximumSize(new java.awt.Dimension(490, 390));
         jFrame3.setMinimumSize(new java.awt.Dimension(490, 390));
-        jFrame3.setPreferredSize(new java.awt.Dimension(490, 390));
         jFrame3.setResizable(false);
         jFrame3.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -134,9 +145,7 @@ public class MainForm6 extends javax.swing.JFrame {
 
         jFrame4.setTitle("окно 4, лаба 6");
         jFrame4.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("icon.jpg")));
-        jFrame4.setMaximumSize(new java.awt.Dimension(490, 390));
         jFrame4.setMinimumSize(new java.awt.Dimension(490, 390));
-        jFrame4.setPreferredSize(new java.awt.Dimension(490, 390));
         jFrame4.setResizable(false);
         jFrame4.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -176,9 +185,7 @@ public class MainForm6 extends javax.swing.JFrame {
 
         jFrame5.setTitle("окно 5, лаба 6");
         jFrame5.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("icon.jpg")));
-        jFrame5.setMaximumSize(new java.awt.Dimension(490, 390));
         jFrame5.setMinimumSize(new java.awt.Dimension(490, 390));
-        jFrame5.setPreferredSize(new java.awt.Dimension(490, 390));
         jFrame5.setResizable(false);
         jFrame5.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -336,6 +343,37 @@ public class MainForm6 extends javax.swing.JFrame {
         jFrame5.setVisible(false);
     }//GEN-LAST:event_jButton_back5ActionPerformed
 
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        switch (jComboBox2.getSelectedIndex()) {
+            case 0:
+                jLabel_choice2.setText("Выбрано: вода");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("water.png")));
+                break;
+            case 1:
+                jLabel_choice2.setText("Выбрано: чай");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("tea.png")));
+                break;
+            case 2:
+                jLabel_choice2.setText("Выбрано: кофе");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("coffee.png")));
+                break;
+            case 3:
+                jLabel_choice2.setText("Выбрано: молоко");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("milk.png")));
+                break;
+            case 4:
+                jLabel_choice2.setText("Выбрано: пиво");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("beer.png")));
+                break;
+            case 5:
+                jLabel_choice2.setText("Выбрано: вино");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("wine.png")));
+                break;
+        }
+        //Label6.setText("Выбрано: Рисовая каша");
+        //jLabel9.setIcon(new ImageIcon(jFrame1.class.getResource("morda1.png")));
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -389,6 +427,8 @@ public class MainForm6 extends javax.swing.JFrame {
     private javax.swing.JFrame jFrame4;
     private javax.swing.JFrame jFrame5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel_choice2;
+    private javax.swing.JLabel jLabel_picture2;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTextArea jTextArea1;
