@@ -6,7 +6,7 @@
       <Properties>
         <Property name="title" type="java.lang.String" value="&#x43e;&#x43a;&#x43d;&#x43e; 2, &#x43b;&#x430;&#x431;&#x430; 6"/>
         <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource(&quot;icon.jpg&quot;))" type="code"/>
+          <Connection code="java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource(&quot;pictures/icon.jpg&quot;))" type="code"/>
         </Property>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[490, 390]"/>
@@ -20,9 +20,12 @@
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
       <Events>
+        <EventHandler event="componentHidden" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jFrame2ComponentHidden"/>
         <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="jFrame2WindowClosing"/>
+        <EventHandler event="windowOpened" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="jFrame2WindowOpened"/>
       </Events>
       <AuxValues>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="MainForm6_jFrame2"/>
         <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="jFrame2.setLocationRelativeTo(null);"/>
       </AuxValues>
 
@@ -116,7 +119,7 @@
       <Properties>
         <Property name="title" type="java.lang.String" value="&#x43e;&#x43a;&#x43d;&#x43e; 3, &#x43b;&#x430;&#x431;&#x430; 6"/>
         <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource(&quot;icon.jpg&quot;))" type="code"/>
+          <Connection code="java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource(&quot;pictures/icon.jpg&quot;))" type="code"/>
         </Property>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[490, 390]"/>
@@ -124,6 +127,7 @@
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
       <Events>
+        <EventHandler event="componentHidden" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jFrame3ComponentHidden"/>
         <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="jFrame3WindowClosing"/>
       </Events>
       <AuxValues>
@@ -191,7 +195,7 @@
       <Properties>
         <Property name="title" type="java.lang.String" value="&#x43e;&#x43a;&#x43d;&#x43e; 4, &#x43b;&#x430;&#x431;&#x430; 6"/>
         <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource(&quot;icon.jpg&quot;))" type="code"/>
+          <Connection code="java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource(&quot;pictures/icon.jpg&quot;))" type="code"/>
         </Property>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[490, 390]"/>
@@ -199,6 +203,7 @@
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
       <Events>
+        <EventHandler event="componentHidden" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jFrame4ComponentHidden"/>
         <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="jFrame4WindowClosing"/>
       </Events>
       <AuxValues>
@@ -266,7 +271,7 @@
       <Properties>
         <Property name="title" type="java.lang.String" value="&#x43e;&#x43a;&#x43d;&#x43e; 5, &#x43b;&#x430;&#x431;&#x430; 6"/>
         <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource(&quot;icon.jpg&quot;))" type="code"/>
+          <Connection code="java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource(&quot;pictures/icon.jpg&quot;))" type="code"/>
         </Property>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[490, 390]"/>
@@ -274,6 +279,7 @@
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
       <Events>
+        <EventHandler event="componentHidden" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jFrame5ComponentHidden"/>
         <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="jFrame5WindowClosing"/>
       </Events>
       <AuxValues>
@@ -356,7 +362,7 @@
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="&#x43e;&#x43a;&#x43d;&#x43e; 1, &#x43b;&#x430;&#x431;&#x430; 6"/>
     <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-      <Connection code="java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource(&quot;icon.jpg&quot;))" type="code"/>
+      <Connection code="java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource(&quot;pictures/icon.jpg&quot;))" type="code"/>
     </Property>
     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[0, 0]"/>
@@ -373,6 +379,7 @@
     <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <Events>
+    <EventHandler event="componentHidden" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="formComponentHidden"/>
     <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosing"/>
   </Events>
   <AuxValues>

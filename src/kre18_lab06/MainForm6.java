@@ -53,14 +53,22 @@ public class MainForm6 extends javax.swing.JFrame {
         jButton_begin1 = new javax.swing.JButton();
 
         jFrame2.setTitle("окно 2, лаба 6");
-        jFrame2.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("icon.jpg")));
+        jFrame2.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("pictures/icon.jpg")));
         jFrame2.setMaximumSize(new java.awt.Dimension(490, 390));
         jFrame2.setMinimumSize(new java.awt.Dimension(490, 390));
         jFrame2.setPreferredSize(new java.awt.Dimension(490, 390));
         jFrame2.setResizable(false);
+        jFrame2.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                jFrame2ComponentHidden(evt);
+            }
+        });
         jFrame2.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 jFrame2WindowClosing(evt);
+            }
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                jFrame2WindowOpened(evt);
             }
         });
         jFrame2.getContentPane().setLayout(null);
@@ -104,9 +112,14 @@ public class MainForm6 extends javax.swing.JFrame {
         jFrame2.setLocationRelativeTo(null);
 
         jFrame3.setTitle("окно 3, лаба 6");
-        jFrame3.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("icon.jpg")));
+        jFrame3.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("pictures/icon.jpg")));
         jFrame3.setMinimumSize(new java.awt.Dimension(490, 390));
         jFrame3.setResizable(false);
+        jFrame3.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                jFrame3ComponentHidden(evt);
+            }
+        });
         jFrame3.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 jFrame3WindowClosing(evt);
@@ -144,9 +157,14 @@ public class MainForm6 extends javax.swing.JFrame {
         jFrame3.setLocationRelativeTo(null);
 
         jFrame4.setTitle("окно 4, лаба 6");
-        jFrame4.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("icon.jpg")));
+        jFrame4.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("pictures/icon.jpg")));
         jFrame4.setMinimumSize(new java.awt.Dimension(490, 390));
         jFrame4.setResizable(false);
+        jFrame4.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                jFrame4ComponentHidden(evt);
+            }
+        });
         jFrame4.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 jFrame4WindowClosing(evt);
@@ -184,9 +202,14 @@ public class MainForm6 extends javax.swing.JFrame {
         jFrame4.setLocationRelativeTo(null);
 
         jFrame5.setTitle("окно 5, лаба 6");
-        jFrame5.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("icon.jpg")));
+        jFrame5.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("pictures/icon.jpg")));
         jFrame5.setMinimumSize(new java.awt.Dimension(490, 390));
         jFrame5.setResizable(false);
+        jFrame5.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                jFrame5ComponentHidden(evt);
+            }
+        });
         jFrame5.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 jFrame5WindowClosing(evt);
@@ -230,10 +253,15 @@ public class MainForm6 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("окно 1, лаба 6");
-        setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("icon.jpg")));
+        setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("pictures/icon.jpg")));
         setMaximumSize(new java.awt.Dimension(0, 0));
         setMinimumSize(new java.awt.Dimension(400, 300));
         setResizable(false);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                formComponentHidden(evt);
+            }
+        });
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
@@ -340,39 +368,79 @@ public class MainForm6 extends javax.swing.JFrame {
 
     private void jButton_back5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_back5ActionPerformed
         jFrame4.setVisible(true);
-        jFrame5.setVisible(false);
+        jFrame5.setVisible(false);        
     }//GEN-LAST:event_jButton_back5ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         switch (jComboBox2.getSelectedIndex()) {
             case 0:
-                jLabel_choice2.setText("Выбрано: вода");
-                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("water.png")));
+                jLabel_choice2.setText("Выбрано: \"вода\"");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("pictures/water.png")));
                 break;
             case 1:
-                jLabel_choice2.setText("Выбрано: чай");
-                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("tea.png")));
+                jLabel_choice2.setText("Выбрано: \"чай\"");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("pictures/tea.png")));
                 break;
             case 2:
-                jLabel_choice2.setText("Выбрано: кофе");
-                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("coffee.png")));
+                jLabel_choice2.setText("Выбрано: \"кофе\"");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("pictures/coffee.png")));
                 break;
             case 3:
-                jLabel_choice2.setText("Выбрано: молоко");
-                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("milk.png")));
+                jLabel_choice2.setText("Выбрано: \"молоко\"");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("pictures/milk.png")));
                 break;
             case 4:
-                jLabel_choice2.setText("Выбрано: пиво");
-                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("beer.png")));
+                jLabel_choice2.setText("Выбрано: \"пиво\"");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("pictures/beer.png")));
                 break;
             case 5:
-                jLabel_choice2.setText("Выбрано: вино");
-                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("wine.png")));
+                jLabel_choice2.setText("Выбрано: \"вино\"");
+                jLabel_picture2.setIcon(new ImageIcon(MainForm6.class.getResource("pictures/wine.png")));
+                break;
+            default:
+                jLabel_choice2.setText("");
                 break;
         }
-        //Label6.setText("Выбрано: Рисовая каша");
-        //jLabel9.setIcon(new ImageIcon(jFrame1.class.getResource("morda1.png")));
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jFrame2WindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_jFrame2WindowOpened
+        jComboBox2.setSelectedIndex(0);        
+    }//GEN-LAST:event_jFrame2WindowOpened
+
+    private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
+        jFrame2.setLocation(this.getLocation());
+        jFrame3.setLocation(this.getLocation());
+        jFrame4.setLocation(this.getLocation());
+        jFrame5.setLocation(this.getLocation()); 
+    }//GEN-LAST:event_formComponentHidden
+
+    private void jFrame2ComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jFrame2ComponentHidden
+        this.setLocation(jFrame2.getLocation());
+        jFrame3.setLocation(jFrame2.getLocation());
+        jFrame4.setLocation(jFrame2.getLocation());
+        jFrame5.setLocation(jFrame2.getLocation()); 
+    }//GEN-LAST:event_jFrame2ComponentHidden
+
+    private void jFrame3ComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jFrame3ComponentHidden
+        this.setLocation(jFrame3.getLocation());
+        jFrame2.setLocation(jFrame3.getLocation());
+        jFrame4.setLocation(jFrame3.getLocation());
+        jFrame5.setLocation(jFrame3.getLocation());
+    }//GEN-LAST:event_jFrame3ComponentHidden
+
+    private void jFrame4ComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jFrame4ComponentHidden
+        this.setLocation(jFrame4.getLocation());
+        jFrame2.setLocation(jFrame4.getLocation());
+        jFrame3.setLocation(jFrame4.getLocation());
+        jFrame5.setLocation(jFrame4.getLocation());
+    }//GEN-LAST:event_jFrame4ComponentHidden
+
+    private void jFrame5ComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jFrame5ComponentHidden
+        this.setLocation(jFrame5.getLocation());
+        jFrame2.setLocation(jFrame5.getLocation());
+        jFrame3.setLocation(jFrame5.getLocation());
+        jFrame4.setLocation(jFrame5.getLocation());
+    }//GEN-LAST:event_jFrame5ComponentHidden
 
     /**
      * @param args the command line arguments
