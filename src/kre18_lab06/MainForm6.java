@@ -1,5 +1,6 @@
 package kre18_lab06;
 
+import java.awt.Color;
 import javax.swing.ImageIcon;
 
 /**
@@ -36,9 +37,12 @@ public class MainForm6 extends javax.swing.JFrame {
         jLabel_picture2 = new javax.swing.JLabel();
         jLabel_choice2 = new javax.swing.JLabel();
         jFrame3 = new javax.swing.JFrame();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox3_1 = new javax.swing.JCheckBox();
         jButton_back3 = new javax.swing.JButton();
         jButton_next3 = new javax.swing.JButton();
+        jCheckBox3_2 = new javax.swing.JCheckBox();
+        jCheckBox3_3 = new javax.swing.JCheckBox();
+        jLabel3 = new javax.swing.JLabel();
         jFrame4 = new javax.swing.JFrame();
         jRadioButton4 = new javax.swing.JRadioButton();
         jButton_back4 = new javax.swing.JButton();
@@ -54,9 +58,7 @@ public class MainForm6 extends javax.swing.JFrame {
 
         jFrame2.setTitle("окно 2, лаба 6");
         jFrame2.setIconImage(java.awt.Toolkit.getDefaultToolkit().createImage(getClass().getResource("pictures/icon.jpg")));
-        jFrame2.setMaximumSize(new java.awt.Dimension(490, 390));
         jFrame2.setMinimumSize(new java.awt.Dimension(490, 390));
-        jFrame2.setPreferredSize(new java.awt.Dimension(490, 390));
         jFrame2.setResizable(false);
         jFrame2.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
@@ -127,9 +129,17 @@ public class MainForm6 extends javax.swing.JFrame {
         });
         jFrame3.getContentPane().setLayout(null);
 
-        jCheckBox3.setText("jCheckBox1");
-        jFrame3.getContentPane().add(jCheckBox3);
-        jCheckBox3.setBounds(120, 70, 104, 23);
+        jCheckBox3_1.setForeground(java.awt.Color.blue);
+        jCheckBox3_1.setSelected(true);
+        jCheckBox3_1.setText("Мужчина (с галочкой)");
+        jCheckBox3_1.setActionCommand("question1");
+        jCheckBox3_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3_1ActionPerformed(evt);
+            }
+        });
+        jFrame3.getContentPane().add(jCheckBox3_1);
+        jCheckBox3_1.setBounds(120, 70, 260, 23);
 
         jButton_back3.setText("НАЗАД");
         jButton_back3.setMaximumSize(new java.awt.Dimension(0, 0));
@@ -153,6 +163,34 @@ public class MainForm6 extends javax.swing.JFrame {
         });
         jFrame3.getContentPane().add(jButton_next3);
         jButton_next3.setBounds(330, 300, 120, 40);
+
+        jCheckBox3_2.setForeground(java.awt.Color.blue);
+        jCheckBox3_2.setSelected(true);
+        jCheckBox3_2.setText("Знаком с Java (с галочкой)");
+        jCheckBox3_2.setActionCommand("question2");
+        jCheckBox3_2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3_2ActionPerformed(evt);
+            }
+        });
+        jFrame3.getContentPane().add(jCheckBox3_2);
+        jCheckBox3_2.setBounds(120, 100, 260, 23);
+
+        jCheckBox3_3.setForeground(java.awt.Color.blue);
+        jCheckBox3_3.setSelected(true);
+        jCheckBox3_3.setText("Это окно №3 (с галочкой)");
+        jCheckBox3_3.setActionCommand("question3");
+        jCheckBox3_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3_3ActionPerformed(evt);
+            }
+        });
+        jFrame3.getContentPane().add(jCheckBox3_3);
+        jCheckBox3_3.setBounds(120, 130, 260, 23);
+
+        jLabel3.setText("Надпись меняется в зависимости от галочки:");
+        jFrame3.getContentPane().add(jLabel3);
+        jLabel3.setBounds(70, 30, 350, 15);
 
         jFrame3.setLocationRelativeTo(null);
 
@@ -368,7 +406,7 @@ public class MainForm6 extends javax.swing.JFrame {
 
     private void jButton_back5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_back5ActionPerformed
         jFrame4.setVisible(true);
-        jFrame5.setVisible(false);        
+        jFrame5.setVisible(false);
     }//GEN-LAST:event_jButton_back5ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
@@ -404,21 +442,21 @@ public class MainForm6 extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jFrame2WindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_jFrame2WindowOpened
-        jComboBox2.setSelectedIndex(0);        
+        jComboBox2.setSelectedIndex(0);
     }//GEN-LAST:event_jFrame2WindowOpened
 
     private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
         jFrame2.setLocation(this.getLocation());
         jFrame3.setLocation(this.getLocation());
         jFrame4.setLocation(this.getLocation());
-        jFrame5.setLocation(this.getLocation()); 
+        jFrame5.setLocation(this.getLocation());
     }//GEN-LAST:event_formComponentHidden
 
     private void jFrame2ComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jFrame2ComponentHidden
         this.setLocation(jFrame2.getLocation());
         jFrame3.setLocation(jFrame2.getLocation());
         jFrame4.setLocation(jFrame2.getLocation());
-        jFrame5.setLocation(jFrame2.getLocation()); 
+        jFrame5.setLocation(jFrame2.getLocation());
     }//GEN-LAST:event_jFrame2ComponentHidden
 
     private void jFrame3ComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jFrame3ComponentHidden
@@ -442,6 +480,36 @@ public class MainForm6 extends javax.swing.JFrame {
         jFrame4.setLocation(jFrame5.getLocation());
     }//GEN-LAST:event_jFrame5ComponentHidden
 
+    private void jCheckBox3_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3_1ActionPerformed
+        if (jCheckBox3_1.isSelected()) {
+            jCheckBox3_1.setText("Мужчина (с галочкой)");
+            jCheckBox3_1.setForeground(Color.BLUE);
+        } else {
+            jCheckBox3_1.setText("Женщина (без галочки)");
+            jCheckBox3_1.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_jCheckBox3_1ActionPerformed
+
+    private void jCheckBox3_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3_2ActionPerformed
+        if (jCheckBox3_2.isSelected()) {
+            jCheckBox3_2.setText("Знаком с Java (с галочкой)");
+            jCheckBox3_2.setForeground(Color.BLUE);
+        } else {
+            jCheckBox3_2.setText("Не знаком с Java (без галочки)");
+            jCheckBox3_2.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_jCheckBox3_2ActionPerformed
+
+    private void jCheckBox3_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3_3ActionPerformed
+        if (jCheckBox3_3.isSelected()) {
+            jCheckBox3_3.setText("Да, это окно №3");
+            jCheckBox3_3.setForeground(Color.BLUE);
+        } else {
+            jCheckBox3_3.setText("Нет, это не окно №3");
+            jCheckBox3_3.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_jCheckBox3_3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -459,13 +527,17 @@ public class MainForm6 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainForm6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainForm6.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainForm6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainForm6.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainForm6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainForm6.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainForm6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainForm6.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -488,13 +560,16 @@ public class MainForm6 extends javax.swing.JFrame {
     private javax.swing.JButton jButton_next2;
     private javax.swing.JButton jButton_next3;
     private javax.swing.JButton jButton_next4;
-    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox3_1;
+    private javax.swing.JCheckBox jCheckBox3_2;
+    private javax.swing.JCheckBox jCheckBox3_3;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JFrame jFrame3;
     private javax.swing.JFrame jFrame4;
     private javax.swing.JFrame jFrame5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel_choice2;
     private javax.swing.JLabel jLabel_picture2;
     private javax.swing.JRadioButton jRadioButton4;
