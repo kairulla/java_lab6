@@ -2,6 +2,7 @@ package kre18_lab06;
 
 import java.awt.Color;
 import javax.swing.ImageIcon;
+import javax.swing.JRadioButton;
 
 /**
  *
@@ -44,9 +45,15 @@ public class MainForm6 extends javax.swing.JFrame {
         jCheckBox3_3 = new javax.swing.JCheckBox();
         jLabel3 = new javax.swing.JLabel();
         jFrame4 = new javax.swing.JFrame();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        jLabel4 = new javax.swing.JLabel();
+        jRadioButton4_1 = new javax.swing.JRadioButton();
+        jRadioButton4_2 = new javax.swing.JRadioButton();
+        jRadioButton4_3 = new javax.swing.JRadioButton();
+        jRadioButton4_4 = new javax.swing.JRadioButton();
+        jRadioButton4_5 = new javax.swing.JRadioButton();
         jButton_back4 = new javax.swing.JButton();
         jButton_next4 = new javax.swing.JButton();
+        buttonGroup4 = new javax.swing.ButtonGroup();
         jFrame5 = new javax.swing.JFrame();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -210,9 +217,59 @@ public class MainForm6 extends javax.swing.JFrame {
         });
         jFrame4.getContentPane().setLayout(null);
 
-        jRadioButton4.setText("jRadioButton1");
-        jFrame4.getContentPane().add(jRadioButton4);
-        jRadioButton4.setBounds(30, 50, 125, 23);
+        jLabel4.setText("Какой линукс вы любите?");
+        jFrame4.getContentPane().add(jLabel4);
+        jLabel4.setBounds(80, 50, 340, 15);
+
+        buttonGroup4.add(jRadioButton4_1);
+        jRadioButton4_1.setText("Fedora");
+        jRadioButton4_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4_1_actionPerformed(evt);
+            }
+        });
+        jFrame4.getContentPane().add(jRadioButton4_1);
+        jRadioButton4_1.setBounds(70, 90, 300, 23);
+
+        buttonGroup4.add(jRadioButton4_2);
+        jRadioButton4_2.setText("Mint");
+        jRadioButton4_2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4_1_actionPerformed(evt);
+            }
+        });
+        jFrame4.getContentPane().add(jRadioButton4_2);
+        jRadioButton4_2.setBounds(70, 120, 300, 23);
+
+        buttonGroup4.add(jRadioButton4_3);
+        jRadioButton4_3.setText("Ubuntu");
+        jRadioButton4_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4_1_actionPerformed(evt);
+            }
+        });
+        jFrame4.getContentPane().add(jRadioButton4_3);
+        jRadioButton4_3.setBounds(70, 150, 300, 23);
+
+        buttonGroup4.add(jRadioButton4_4);
+        jRadioButton4_4.setText("Другое");
+        jRadioButton4_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4_1_actionPerformed(evt);
+            }
+        });
+        jFrame4.getContentPane().add(jRadioButton4_4);
+        jRadioButton4_4.setBounds(70, 180, 300, 23);
+
+        buttonGroup4.add(jRadioButton4_5);
+        jRadioButton4_5.setText("Не пользуюсь Linux");
+        jRadioButton4_5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4_1_actionPerformed(evt);
+            }
+        });
+        jFrame4.getContentPane().add(jRadioButton4_5);
+        jRadioButton4_5.setBounds(70, 210, 300, 23);
 
         jButton_back4.setText("НАЗАД");
         jButton_back4.setMaximumSize(new java.awt.Dimension(0, 0));
@@ -510,6 +567,17 @@ public class MainForm6 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jCheckBox3_3ActionPerformed
 
+    private void jRadioButton4_1_actionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4_1_actionPerformed
+        jRadioButton4_1.setForeground(Color.BLACK);
+        jRadioButton4_2.setForeground(Color.BLACK);
+        jRadioButton4_3.setForeground(Color.BLACK);
+        jRadioButton4_4.setForeground(Color.BLACK);
+        jRadioButton4_5.setForeground(Color.BLACK);
+        
+        JRadioButton button = (JRadioButton) evt.getSource();
+        button.setForeground(Color.BLUE);
+    }//GEN-LAST:event_jRadioButton4_1_actionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -550,6 +618,7 @@ public class MainForm6 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JButton jButton_back2;
     private javax.swing.JButton jButton_back3;
     private javax.swing.JButton jButton_back4;
@@ -570,9 +639,14 @@ public class MainForm6 extends javax.swing.JFrame {
     private javax.swing.JFrame jFrame5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel_choice2;
     private javax.swing.JLabel jLabel_picture2;
-    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton4_1;
+    private javax.swing.JRadioButton jRadioButton4_2;
+    private javax.swing.JRadioButton jRadioButton4_3;
+    private javax.swing.JRadioButton jRadioButton4_4;
+    private javax.swing.JRadioButton jRadioButton4_5;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
